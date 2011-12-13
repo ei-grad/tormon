@@ -123,7 +123,6 @@ application = tornado.web.Application(
 
 if __name__ == "__main__":
     application.listen(8888)
-    #tornado.ioloop.PeriodicCallback(dump_storage, 10000).start()
     tornado.ioloop.PeriodicCallback(check_pollers, 1000).start()
     tornado.ioloop.PeriodicCallback(clear_events, 10000).start()
     io_loop.start()
